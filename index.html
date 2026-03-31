@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Realistic Title for browser tabs -->
+    <title>Pornhub.com - The World's Leading Free Porn Site</title>
+    
+    <!-- Favicon: Using a high-quality representative icon for the orange/black aesthetic -->
+    <link rel="icon" type="image/png" href="https://www.google.com/s2/favicons?sz=64&domain=pornhub.com">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+        
+        body {
+            background-color: #000000;
+            color: #ffffff;
+            font-family: 'Roboto', Arial, Helvetica, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            overflow: hidden;
+        }
+
+        .age-gate-container {
+            max-width: 580px;
+            width: 90%;
+            background: #1b1b1b;
+            border-radius: 4px;
+            text-align: center;
+            padding: 40px 30px;
+            box-shadow: 0 0 40px rgba(0,0,0,0.8);
+            border: 1px solid #2e2e2e;
+        }
+
+        .ph-logo {
+            font-size: 42px;
+            font-weight: 700;
+            margin-bottom: 30px;
+            letter-spacing: -1.5px;
+            user-select: none;
+        }
+
+        .ph-logo span {
+            background: #ff9900;
+            color: #000;
+            padding: 0 6px;
+            border-radius: 4px;
+            margin-left: 2px;
+        }
+
+        .age-gate-title {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: #fff;
+        }
+
+        .age-gate-text {
+            font-size: 13px;
+            line-height: 1.6;
+            color: #999;
+            margin-bottom: 25px;
+            text-align: left;
+        }
+
+        .btn-container {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 25px;
+        }
+
+        .btn-enter {
+            flex: 1;
+            background: #ff9900;
+            color: #000;
+            font-weight: 700;
+            padding: 14px;
+            border-radius: 3px;
+            text-transform: uppercase;
+            font-size: 15px;
+            cursor: pointer;
+            border: none;
+            transition: background 0.1s;
+        }
+
+        .btn-enter:hover {
+            background: #ffa524;
+        }
+
+        .btn-exit {
+            flex: 1;
+            background: #333;
+            color: #fff;
+            font-weight: 700;
+            padding: 14px;
+            border-radius: 3px;
+            text-transform: uppercase;
+            font-size: 15px;
+            cursor: pointer;
+            border: none;
+            transition: background 0.1s;
+        }
+
+        .btn-exit:hover {
+            background: #444;
+        }
+
+        .footer-links {
+            font-size: 12px;
+            color: #666;
+            margin-top: 20px;
+        }
+
+        /* Prank Screen Styles */
+        #prank-content {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #000;
+            background: radial-gradient(circle at center, #222 0%, #000 100%);
+            z-index: 1000;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .jester-container {
+            width: 300px;
+            height: 300px;
+            margin-bottom: 20px;
+            animation: springUp 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards, 
+                       wobble 2s ease-in-out infinite 0.5s;
+            transform-origin: bottom center;
+        }
+
+        .jester-image {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        @keyframes springUp {
+            0% { transform: scale(0.5) translateY(500px); }
+            100% { transform: scale(1) translateY(0); }
+        }
+
+        @keyframes wobble {
+            0%, 100% { transform: rotate(-5deg) scale(1); }
+            50% { transform: rotate(5deg) scale(1.1); }
+        }
+
+        .moving-text {
+            font-size: 64px;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: -2px;
+            margin-bottom: 10px;
+            animation: bounceText 0.8s infinite alternate, 
+                       colorShift 3s infinite;
+        }
+
+        @keyframes bounceText {
+            from { transform: translateY(0); }
+            to { transform: translateY(-15px); }
+        }
+
+        @keyframes colorShift {
+            0% { color: #ff9900; }
+            33% { color: #ff00ff; }
+            66% { color: #00ffff; }
+            100% { color: #ff9900; }
+        }
+
+        .sub-text {
+            font-size: 24px;
+            color: #fff;
+            margin-bottom: 30px;
+            animation: pulse 1.5s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.7; transform: scale(0.95); }
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Authentic Age Gate -->
+    <div id="gate" class="age-gate-container">
+        <div class="ph-logo">Porn<span>hub</span></div>
+        
+        <h1 class="age-gate-title">AGE VERIFICATION</h1>
+        
+        <div class="age-gate-text">
+            This website contains age-restricted materials including nudity and explicit depictions of sexual acts. By entering, you affirm that you are at least 18 years of age or the age of majority in the jurisdiction from which you are accessing the website and you consent to viewing sexually explicit content. 
+            <br><br>
+            Any person depicted in the content on this website was at least 18 years of age at the time of the photography or video recording.
+        </div>
+
+        <div class="btn-container">
+            <button class="btn-enter" onclick="showPrank()">I am 18 or older - Enter</button>
+            <button class="btn-exit" onclick="window.location.href='https://google.com'">I am under 18 - Exit</button>
+        </div>
+
+        <div class="footer-links">
+            <a href="javascript:void(0)" class="text-[#ff9900] hover:underline">Parental Control</a> | <a href="javascript:void(0)" class="text-[#ff9900] hover:underline">Terms & Conditions</a>
+        </div>
+    </div>
+
+    <!-- The Prank Reveal -->
+    <div id="prank-content">
+        <div class="jester-container">
+            <!-- Using the uploaded jester image -->
+            <img src="image_310138.png" alt="Jester" class="jester-image">
+        </div>
+        
+        <h2 class="moving-text">APRIL FOOLS!</h2>
+        
+        <p class="sub-text">You Have Been Fooled</p>
+        
+        <p class="text-lg text-gray-400 mb-12 max-w-md">
+            Happy April Fools!
+        </p>
+        
+        <button 
+            onclick="location.reload()" 
+            class="px-12 py-4 bg-[#ff9900] text-black font-black rounded uppercase tracking-tighter hover:bg-white transition-all transform hover:scale-110 active:scale-95 shadow-[0_0_20px_rgba(255,153,0,0.5)]"
+        >
+            Clear My Conscience
+        </button>
+    </div>
+
+    <script>
+        function showPrank() {
+            // Change title to something funny once clicked
+            document.title = "🤡 GOTCHA! - April Fools";
+            
+            document.getElementById('gate').style.display = 'none';
+            const prank = document.getElementById('prank-content');
+            prank.style.display = 'flex';
+            
+            // Console prank for technical friends
+            console.clear();
+            console.log("%c 🚨 POLICE REPORT 🚨 %c", 
+                "background: red; color: white; font-size: 40px; font-weight: bold; padding: 10px;", "");
+            console.log("%c User has been caught attempting to access adult content. %c", 
+                "color: yellow; font-size: 20px; font-weight: bold;", "");
+            console.log("Just kidding. Happy April Fools! 🤡");
+        }
+    </script>
+</body>
+</html>
